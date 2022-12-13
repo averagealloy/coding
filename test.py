@@ -13,9 +13,14 @@ prompt = "software engineering"
 
 result = generator(prompt, max_length=25, do_sample=True, temperature=0.9)
 
-print(result[0]['generated_text'])
-# retuns the first item in result. with key "generated text" give us raw string
+
+print(result)
+# returns a list with the only item in the list being a dictionary. 
 
 
-print(result[0]['generated_text'].upper())
-# because we are asking for a string back we can use string manipulation
+# print(result[0]['generated_text'])
+# we want the 0th item in the the list. Then we want to get the item in the dict with the key called "generated text"
+
+
+# print(result[0]['generated_text'].upper())
+# because we are asking for a string back we can use string manipulation in python to show that it works
