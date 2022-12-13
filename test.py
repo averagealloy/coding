@@ -4,14 +4,21 @@ print("hello world")
 # ---------------------------------------------------------------------------------
 # need to add more explanation for the below steps. Just super tired today.
 
+
+
+
+
 from transformers import pipeline
 
 generator = pipeline('text-generation', model='EleutherAI/gpt-neo-1.3B')
+generator.model.config.pad_token_id = generator.model.config.eos_token_id
+# weird error solved where it kepted out putting this: Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
 
 # prompt = "The New York Jets"
 prompt = "software engineering"
 
 result = generator(prompt, max_length=25, do_sample=True, temperature=0.9)
+
 
 
 print(result)
@@ -24,3 +31,4 @@ print(result)
 
 # print(result[0]['generated_text'].upper())
 # because we are asking for a string back we can use string manipulation in python to show that it works
+
