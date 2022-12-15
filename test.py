@@ -21,7 +21,7 @@ result = generator(prompt, max_length=25, do_sample=True, temperature=0.9)
 
 
 
-print(result)
+# print(result)
 # returns a list with the only item in the list being a dictionary. 
 
 
@@ -29,6 +29,13 @@ print(result)
 # we want the 0th item in the the list. Then we want to get the item in the dict with the key called "generated text"
 
 
-# print(result[0]['generated_text'].upper())
+print(result[0]['generated_text'].upper())
 # because we are asking for a string back we can use string manipulation in python to show that it works
 
+# feeling good about the result of the ai part sooooooooo now api stuff 
+
+# --------------------------------------------------------------------------------------------------------------------------------------
+
+# api's in python: https://www.youtube.com/watch?v=hpc5jyVpUpw
+
+# just a youtube search for linkedin api: https://www.youtube.com/results?search_query=linkedin+api+
