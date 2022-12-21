@@ -1,4 +1,4 @@
-print("hello world")
+print("I am the ai file the generates text to be tweeted")
 # the run command for python files is python3 "the file name".py 
 # welcome back to earth lol 
 # ---------------------------------------------------------------------------------
@@ -30,6 +30,8 @@ result = generator(prompt, max_length=25, do_sample=True, temperature=0.9)
 
 
 print(result[0]['generated_text'].upper())
+
+justText = result[0]['generated_text'].upper()
 # because we are asking for a string back we can use string manipulation in python to show that it works
 
 # feeling good about the result of the ai part sooooooooo now api stuff 
