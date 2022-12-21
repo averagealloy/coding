@@ -13,4 +13,4 @@ result = generator(prompt, max_length=25, do_sample=True, temperature=0.9)
 # we want the 0th item in the the list. Then we want to get the item in the dict with the key called "generated text"
 print(result[0]['generated_text'].upper())
 
-justText = result[0]['generated_text'].upper()
+justText = result[0]['generated_text']
