@@ -15,7 +15,10 @@ generator.model.config.pad_token_id = generator.model.config.eos_token_id
 # weird error solved where it kepted out putting this: Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
 
 # prompt = "The New York Jets"
-prompt = "software engineering"
+# prompt = "software engineering"
+
+prompt = input("What can the hivemind do for you today?:")
+
 
 result = generator(prompt, max_length=25, do_sample=True, temperature=0.9)
 
